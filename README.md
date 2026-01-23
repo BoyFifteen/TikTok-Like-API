@@ -1,66 +1,80 @@
-# TikTok Like API – Private Endpoint Integration
+# TikTok Like API – Private Endpoint (Digg)
 
-![TikTok API](https://img.shields.io/badge/API-TikTok-ff0050?style=for-the-badge&logo=tiktok)
-![Protocol](https://img.shields.io/badge/Protocol-Mobile%20Internal-blue?style=for-the-badge)
+⚡ High‑quality TikTok Android Private Like API implementation  
+⚡ Strictly follows official mobile traffic behavior (Body = Null)
 
-This project provides a clean and accurate implementation of TikTok’s internal like (**digg**) request using the official mobile application request structure. The request format strictly follows real TikTok traffic behavior, including correct query parameters, headers, and signatures.
+---
 
 ## 📌 Overview
 
-The script sends a **POST** request to the following endpoint:
-`POST /aweme/v1/commit/item/digg/`
+This project provides a clean and accurate implementation of TikTok’s internal like (**digg**) request. It is designed to match the **real TikTok Android app behavior** for the following endpoint:
+`/aweme/v1/commit/item/digg/`
 
-### Technical Logic:
-* **Query-Centric:** All required parameters are sent via the query string, exactly as observed in real TikTok Android app requests.
-
----
-
-## 🚀 Key Characteristics
-
-- **POST request** .
-- **Full Query Integration:** All parameters included in the query string.
-- **Header Precision:** .
-- **Realistic Identity:** .
-- **Signature Support:** Compatible with `x-gorgon`, `x-argus`, `x-ladon`, and `x-khronos`.
-- **Version Compatibility:** Optimized for current TikTok Android versions.
+Unlike other endpoints, this specific implementation follows the protocol where:
+- All parameters are sent via the **Query String**.
+- The **POST Body** is explicitly empty (`null`).
+- No `x-ss-stub` header is required.
 
 ---
 
-## 🛠 Technical Notes
+## ✨ Features
 
-* **Authentication:** The request relies entirely on valid session cookies and tokens.
-* **Signatures:** Signatures must be generated externally using existing implementations.
-* **Consistency:** Device, region, and app parameters must remain consistent with the session.
-* **Security:** This project does not attempt to bypass TikTok security mechanisms but rather mimics legitimate traffic.
+- ✅ **Protocol Accurate:** Matches TikTok’s current Android behavior for like actions.
+- ✅ **Zero-Body POST:** Correct implementation of `body = null` requests.
+- ✅ **Clean Headers:** No unnecessary `x-ss-stub`, strictly following mobile logic.
+- ✅ **Signature Support:** Compatible with `x-gorgon`, `x-argus`, `x-ladon`, and `x-khronos`.
+- ✅ **Mobile Identity:** Uses realistic Android User-Agents and device parameters.
+- ✅ **Clean Code:** Minimal, readable, and easy to integrate.
 
 ---
+
+## 🔐 Security & Signatures
+
+The implementation relies on valid signature generation:
+- **Gorgon & Argus:** Required for request validation.
+- **Ladon & Khronos:** Used for device and time-based integrity.
+
+> **Note:** This project focuses on the request structure. Signatures must be provided via your existing generator.
+
+---
+
+## 📂 Request Structure
+
+- **Method:** `POST`
+- **Body:** `null` (Empty)
+- **Query:** All action parameters (`aweme_id`, `type`, `device_id`, etc.)
+- **Headers:** Fully aligned with real Android mobile requests.
+
+---
+
+## 🧩 Technical Notes
+
+- **Session Based:** Requires valid session cookies and tokens.
+- **Consistency:** Device, region, and app parameters must remain consistent with the session.
+- **Bypass:** This project does not bypass security; it simulates legitimate network traffic.
+
+---
+
+## 🛒 Commercial APIs
+
+I provide high-performance, private TikTok APIs for various use cases:
+- ✅ **Like (Digg) API** (Modern & Stable)
+- ✅ **Follow / Unfollow API**
+- ✅ **Comment & Engagement APIs**
+- ✅ **User & Video Intelligence APIs**
+- ✅ **Account Management Endpoints**
+
+📩 **Telegram:** [https://t.me/WHI3PER](https://t.me/WHI3PER)
+
+> **Serious inquiries only.**
 
 ---
 
 ## ⚠️ Disclaimer
 
-This project is provided for **educational and research purposes only**. It demonstrates how real TikTok mobile requests are structured at the network level.
-
-The author does not take responsibility for misuse, abuse, or violations of TikTok’s Terms of Service.
-
----
-
-## 💰 Commercial APIs
-
-I provide private, high-performance TikTok APIs for developers:
-
-* ✅ **Like (Digg) API**
-* ✅ **Follow / Unfollow API**
-* ✅ **Comment API**
-* ✅ **User & Video Info API**
-* ✅ **Account Management Endpoints**
-
-### 📨 Contact for Integration
-
-* **Telegram:** [WHI3PER](https://t.me/WHI3PER)
+This project is provided for **educational and research purposes only**. It demonstrates how TikTok mobile requests are structured at the network level. 
+The author is not responsible for any misuse or violations of TikTok’s Terms of Service.
 
 ---
 
-**Author:** **WHI3PER** *Private TikTok API Research & Development*
-
-```
+🔥 **Need a custom endpoint or full integration? Contact me on Telegram.**
