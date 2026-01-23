@@ -12,17 +12,15 @@ The script sends a **POST** request to the following endpoint:
 
 ### Technical Logic:
 * **Query-Centric:** All required parameters are sent via the query string, exactly as observed in real TikTok Android app requests.
-* **Empty Body:** No request body is included (`body = null`).
-* **Header Accuracy:** No `x-ss-stub` header is used, matching TikTok’s current behavior for like actions on Android devices.
 
 ---
 
 ## 🚀 Key Characteristics
 
-- **POST request** with no body (`body = null`).
+- **POST request** .
 - **Full Query Integration:** All parameters included in the query string.
-- **Header Precision:** No `x-ss-stub` header (as per official mobile behavior).
-- **Realistic Identity:** Mobile User-Agent rotation support.
+- **Header Precision:** .
+- **Realistic Identity:** .
 - **Signature Support:** Compatible with `x-gorgon`, `x-argus`, `x-ladon`, and `x-khronos`.
 - **Version Compatibility:** Optimized for current TikTok Android versions.
 
